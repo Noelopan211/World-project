@@ -1,0 +1,258 @@
+import React from "react";
+const accentColor = "#FF7F50"; // Vibrant orange
+const primaryColor = "#23395d"; // Dark blue
+const teal = "#37b6a9";
+
+const fontFamily = "'Poppins', 'Montserrat', Arial, sans-serif";
+
+const styles = {
+  body: {
+    fontFamily,
+    background: "#f7f8fa",
+    color: primaryColor,
+    margin: 0,
+    padding: 0,
+  },
+  hero: {
+    background: `linear-gradient(90deg, ${primaryColor} 70%, ${teal} 100%)`,
+    color: "#fff",
+    padding: "80px 20px 60px 20px",
+    textAlign: "center",
+  },
+  heroButton: {
+    marginTop: 32,
+    background: accentColor,
+    color: "#fff",
+    fontWeight: 600,
+    border: "none",
+    borderRadius: 8,
+    padding: "18px 36px",
+    fontSize: "1.25rem",
+    cursor: "pointer",
+    boxShadow: "0 4px 14px rgba(0,0,0,0.10)",
+    transition: "background 0.2s",
+  },
+  section: {
+    maxWidth: 1100,
+    margin: "0 auto",
+    padding: "60px 20px",
+    background: "#fff",
+    borderRadius: 12,
+    boxShadow: "0 2px 16px rgba(35,57,93,0.067)",
+    marginBottom: 40,
+  },
+  heading: {
+    fontSize: "2.5rem",
+    fontWeight: 700,
+    marginBottom: 12,
+    letterSpacing: "-1px",
+  },
+  subheading: {
+    fontSize: "1.3rem",
+    fontWeight: 400,
+    margin: "0 0 8px 0",
+  },
+  about: {
+    fontSize: "1.18rem",
+    lineHeight: 1.6,
+    color: "#223",
+    marginBottom: 0,
+  },
+  servicesGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: 32,
+    marginTop: 36,
+    marginBottom: 12,
+  },
+  serviceCard: {
+    background: "#f7f8fa",
+    borderRadius: 10,
+    boxShadow: "0 1px 6px rgba(35,57,93,0.07)",
+    padding: "34px 24px",
+    textAlign: "center",
+    color: primaryColor,
+  },
+  serviceIcon: {
+    fontSize: "2.5rem",
+    marginBottom: 16,
+    color: accentColor,
+  },
+  bulletSection: {
+    marginTop: 24,
+    marginBottom: 24,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "start",
+    gap: 8,
+  },
+  bullet: {
+    fontSize: "1.13rem",
+    padding: "6px 0",
+    fontWeight: 500,
+    display: "flex",
+    alignItems: "center",
+    gap: 10,
+  },
+  ctaSection: {
+    textAlign: "center",
+    padding: "50px 20px",
+    background: teal,
+    color: "#fff",
+    borderRadius: 8,
+    margin: "0 auto 32px auto",
+    maxWidth: 900,
+  },
+  ctaButton: {
+    background: accentColor,
+    color: "#fff",
+    fontWeight: 600,
+    border: "none",
+    borderRadius: 8,
+    padding: "16px 32px",
+    fontSize: "1.15rem",
+    cursor: "pointer",
+    marginTop: 18,
+    boxShadow: "0 2px 8px rgba(0,0,0,0.09)",
+  },
+  footer: {
+    background: primaryColor,
+    color: "#fff",
+    padding: "36px 20px 18px 20px",
+    textAlign: "center",
+    fontSize: "1.02rem",
+    marginTop: 30,
+  },
+  socialIcons: {
+    display: "inline-flex",
+    gap: 16,
+    margin: "12px 0",
+  },
+  copyright: {
+    fontSize: "0.95rem",
+    marginTop: 10,
+    color: "#e7eaf1",
+  },
+  contactSection: {
+    maxWidth: 900,
+    margin: "0 auto 32px auto",
+    padding: "40px 20px",
+    background: "#fff",
+    borderRadius: 12,
+    boxShadow: "0 2px 16px rgba(35,57,93,0.07)",
+    textAlign: "center",
+  },
+  contactEmail: {
+    fontSize: "1.18rem",
+    marginBottom: 12,
+    color: accentColor,
+    fontWeight: 600,
+  },
+};
+
+export default function Website() {
+  return (
+    <div style={styles.body}>
+      {/* Hero Section */}
+      <section style={styles.hero}>
+        <h1 style={styles.heading}>
+          Elevate Your Brand with World Project
+        </h1>
+        <p style={styles.subheading}>
+          World Project crafts high-impact content & strategies to grow your audience and drive sales.
+        </p>
+        <button
+          style={styles.heroButton}
+          onClick={() => window.location.href = "#contact"}
+        >
+          Get a Free Strategy Session
+        </button>
+      </section>
+
+      {/* About Us */}
+      <section style={styles.section}>
+        <h2 style={styles.heading}>About World Project</h2>
+        <p style={styles.about}>
+          We’re a results-driven team with <strong>[7]</strong> years of experience in social media advertising, content creation, and campaign management.
+          Let World Project handle your brand’s digital presence while you focus on what you do best.
+        </p>
+      </section>
+
+      {/* Services */}
+      <section style={styles.section}>
+        <h2 style={styles.heading}>Our Services</h2>
+        <div style={styles.servicesGrid}>
+          <div style={styles.serviceCard}>
+            <div style={styles.serviceIcon}>📱</div>
+            <strong>Social Media Management</strong>
+            <p>Comprehensive planning, scheduling, and engagement across all platforms.</p>
+          </div>
+          <div style={styles.serviceCard}>
+            <div style={styles.serviceIcon}>🎨</div>
+            <strong>Content Creation</strong>
+            <p>Graphics, videos, and copywriting tailored to your brand's voice.</p>
+          </div>
+          <div style={styles.serviceCard}>
+            <div style={styles.serviceIcon}>💸</div>
+            <strong>Paid Advertising</strong>
+            <p>Meta, TikTok, and Google Ads for targeted growth & ROI.</p>
+          </div>
+          <div style={styles.serviceCard}>
+            <div style={styles.serviceIcon}>🤝</div>
+            <strong>Influencer & Brand Collaborations</strong>
+            <p>Connect with key creators and partners for greater reach.</p>
+          </div>
+          <div style={styles.serviceCard}>
+            <div style={styles.serviceIcon}>📊</div>
+            <strong>Analytics & Performance Tracking</strong>
+            <p>Transparent reporting and actionable insights for improvement.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section style={styles.section}>
+        <h2 style={styles.heading}>Why Choose World Project?</h2>
+        <div style={styles.bulletSection}>
+          <div style={styles.bullet}>✅ Proven strategies</div>
+          <div style={styles.bullet}>✅ Creative storytelling</div>
+          <div style={styles.bullet}>✅ Transparent reporting</div>
+          <div style={styles.bullet}>✅ Dedicated account managers</div>
+        </div>
+      </section>
+
+      {/* Contact Us Section */}
+      <section id="contact" style={styles.contactSection}>
+        <h2 style={styles.heading}>Contact Us</h2>
+        <div style={styles.contactEmail}>
+          Email us at: <a href="mailto:worldprojec@proton.me" style={{ color: accentColor, textDecoration: "underline" }}>worldprojec@proton.me</a>
+        </div>
+        <p style={styles.about}>
+          For inquiries, quotes, or collaboration requests, please send your message directly to our email address. Our team will respond as soon as possible.
+        </p>
+        <button
+          style={styles.ctaButton}
+          onClick={() => window.location.href = "mailto:worldprojec@proton.me"}
+        >
+          Contact World Project Today
+        </button>
+      </section>
+
+      {/* Footer */}
+      <footer style={styles.footer}>
+        <div>
+          <strong>Contact:</strong> worldprojec@proton.me | (555) 123-4567
+        </div>
+        <div style={styles.socialIcons}>
+          {/* Replace with actual links/icons */}
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" style={{color: "#fff"}}>Instagram</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" style={{color: "#fff"}}>LinkedIn</a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" style={{color: "#fff"}}>Twitter</a>
+        </div>
+        <div style={styles.copyright}>
+          &copy; {new Date().getFullYear()} World Project. All rights reserved.
+        </div>
+      </footer>
+    </div>
+  );
+}

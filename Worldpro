@@ -241,7 +241,7 @@ export default function Website() {
       {/* Footer */}
       <footer style={styles.footer}>
         <div>
-          <strong>Contact:</strong> worldprojec@proton.me | (555) 123-4567
+          <strong>Contact:</strong> worldprojec@proton.me | +447377276475 (Whatsapp)
         </div>
         <div style={styles.socialIcons}>
           {/* Replace with actual links/icons */}

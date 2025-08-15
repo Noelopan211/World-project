@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>World Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Poppins & Montserrat Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #FF7F50;
+      --primary: #23395d;
+      --teal: #37b6a9;
+      --font-main: 'Poppins', 'Montserrat', Arial, sans-serif;
+    }
+    body {
+      font-family: var(--font-main);
+      background: #f7f8fa;
+      color: var(--primary);
+      margin: 0;
+      padding: 0;
+    }
+    .hero {
+      background: linear-gradient(90deg, var(--primary) 70%, var(--teal) 100%);
+      color: #fff;
+      padding: 80px 20px 60px 20px;
+      text-align: center;
+    }
+    .hero-button {
+      margin-top: 32px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      padding: 18px 36px;
+      font-size: 1.25rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+      transition: background 0.2s;
+    }
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(35,57,93,0.067);
+      margin-bottom: 40px;
+    }
+    .heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+    .subheading {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 0 0 8px 0;
+    }
+    .about {
+      font-size: 1.18rem;
+      line-height: 1.6;
+      color: #223;
+      margin-bottom: 0;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      margin-top: 36px;
+      margin-bottom: 12px;
+    }
+    .service-card {
+      background: #f7f8fa;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(35,57,93,0.07);
+      padding: 34px 24px;
+      text-align: center;
+      color: var(--primary);
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    .bullet-section {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .bullet {
+      font-size: 1.13rem;
+      padding: 6px 0;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .contact-section {
+      max-width: 900px;
+      margin: 0 auto 32px auto;
+      padding: 40px 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(35,57,93,0.07);
+      text-align: center;
+    }
+    .contact-email {
+      font-size: 1.18rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .cta-button {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      padding: 16px 32px;
+      font-size: 1.15rem;
+      cursor: pointer;
+      margin-top: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+    }
+    .footer {
+      background: var(--primary);
+      color: #fff;
+      padding: 36px 20px 18px 20px;
+      text-align: center;
+      font-size: 1.02rem;
+      margin-top: 30px;
+    }
+    .social-icons {
+      display: inline-flex;
+      gap: 16px;
+      margin: 12px 0;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .footer a:hover {
+      color: var(--accent);
+    }
+    .copyright {
+      font-size: 0.95rem;
+      margin-top: 10px;
+      color: #e7eaf1;
+    }
+    @media (max-width: 600px) {
+      .heading { font-size: 2rem; }
+      .section, .contact-section { padding: 30px 8px; }
+      .hero { padding: 40px 8px 30px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="heading">Elevate Your Brand with World Project</h1>
+    <p class="subheading">
+      World Project crafts high-impact content &amp; strategies to grow your audience and drive sales.
+    </p>
+    <button class="hero-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      Get a Free Strategy Session
+    </button>
+  </section>
+
+  <!-- About Us -->
+  <section class="section">
+    <h2 class="heading">About World Project</h2>
+    <p class="about">
+      We’re a results-driven team with <strong>7</strong> years of experience in social media advertising, content creation, and campaign management.
+      Let World Project handle your brand’s digital presence while you focus on what you do best.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <h2 class="heading">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <strong>Social Media Management</strong>
+        <p>Comprehensive planning, scheduling, and engagement across all platforms.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <strong>Content Creation</strong>
+        <p>Graphics, videos, and copywriting tailored to your brand's voice.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💸</div>
+        <strong>Paid Advertising</strong>
+        <p>Meta, TikTok, and Google Ads for targeted growth & ROI.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🤝</div>
+        <strong>Influencer & Brand Collaborations</strong>
+        <p>Connect with key creators and partners for greater reach.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <strong>Analytics & Performance Tracking</strong>
+        <p>Transparent reporting and actionable insights for improvement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section">
+    <h2 class="heading">Why Choose World Project?</h2>
+    <div class="bullet-section">
+      <div class="bullet">✅ Proven strategies</div>
+      <div class="bullet">✅ Creative storytelling</div>
+      <div class="bullet">✅ Transparent reporting</div>
+      <div class="bullet">✅ Dedicated account managers</div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="contact-section">
+    <h2 class="heading">Contact Us</h2>
+    <div class="contact-email">
+      Email us at: <a href="mailto:worldprojec@proton.me">worldprojec@proton.me</a>
+    </div>
+    <p class="about">
+      For inquiries, quotes, or collaboration requests, please send your message directly to our email address. Our team will respond as soon as possible.
+    </p>
+    <button class="cta-button" onclick="window.location.href='mailto:worldprojec@proton.me'">
+      Contact World Project Today
+    </button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+      <strong>Contact:</strong> worldprojec@proton.me | +447377276475 (Whatsapp)
+    </div>
+    <div class="social-icons">
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </div>
+    <div class="copyright">
+      &copy; <span id="year"></span> World Project. All rights reserved.
+    </div>
+  </footer>
+  <script>
+    // Set copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
